@@ -6,6 +6,7 @@
     --black-color: #354046;
 }
 
+/* Base CSS */
 * {
     font-family: 'Glory', sans-serif;
     margin: 0;
@@ -475,6 +476,49 @@ h1.heading span {
 .footer .credit-footer span {
     color: var(--blue-color);
 }
+
+/* CSS Scroll Top */
+.scroll-top i {
+    position: fixed;
+    top: calc(100% - 13rem);
+    right: -5%;
+    font-size: 3rem;
+    background: var(--blue-color);
+    color: #fff;
+    padding: 1.2rem 1.6rem;
+    border-radius: 50%;
+    border: 0.2rem solid #fff !important;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+.scroll-top:hover i {
+    background: #fff;
+    color: var(--blue-color);
+    border: 0.2rem solid var(--blue-color) !important;
+}
+.scroll-top i.active {
+    cursor: pointer;
+    opacity: 1;
+    right: 5rem;
+}
+
+/* CSS Loading */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-container.fade-out {
+    top: -120%;
+}
+
 
 
 /* Reponsive media queries */

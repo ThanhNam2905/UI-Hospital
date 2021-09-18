@@ -16,6 +16,20 @@ $(document).ready(function() {
             $('.header').removeClass("header-active");
         }
     })
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 300) {
+            $('.scroll-top i').addClass('active')
+        }
+        else {
+            $('.scroll-top i').removeClass('active')
+        }
+    })
+    $('.scroll-top i').click(function() {
+        $(window).scrollTop({
+            top: 0,
+            behavior: 'smooth'
+        })
+    })
 
     $('.facility').magnificPopup({
         delegate: 'a',
@@ -24,5 +38,13 @@ $(document).ready(function() {
             enabled: true
         }
     })
-    
 })
+
+// Javascript
+function loading() {
+    document.querySelector(".loading-container").classList.add('fade-out')
+}
+function fadeOut() {
+    setInterval(loading, 2500);
+}
+window.onload = fadeOut();
